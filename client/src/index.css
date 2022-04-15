@@ -13,3 +13,8 @@
 /* #storydiv div div div{
     width: 100%;
 } */
+.story-css{
+    right: -5%;
+    left: -5%;
+    z-index: 1000;
+}
