@@ -56,7 +56,7 @@ class Swipe extends Component {
                 )}
                 onAfterSwipe={this.remove}
               >
-                <Card imageURL={cards[0]}></Card>
+                <Card imageURL={cards[0]} name={"name"} bio={"hello there!"}></Card>
               </Swipeable>
               
               {/* {cards.length > 1 && <Card zIndex={-1}>{cards[1]}</Card>} */}
