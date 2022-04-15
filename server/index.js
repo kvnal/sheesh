@@ -19,10 +19,13 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const fileupload = require("express-fileupload");
 const { default: axios } = require("axios");
+const twilio = require('./Twilio')
 
 const fs = require("fs");
 
 // const crust = require("./crust")
+
+
 
 console.log(ipfsClient);
 const ipfs = ipfsClient.create({
@@ -81,6 +84,11 @@ app.get("/create/community", (req, res) => {
 app.get("/community/:id/post", (req, res) => {
   res.render("createcommpost");
 });
+
+app.get("/promotions", (req,res) =>{
+  
+  // twilio.sendSMS("hello test");
+})
 
 var fileName;
 app.post("/upload", (req, res) => { 
