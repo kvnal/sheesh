@@ -31,7 +31,8 @@ const Home = () => {
             </div>
 
 
-                    <div className='scale-90 absolute top-16 story-css'> 
+                    {/* <div className='scale-90 absolute top-16 story-css'>  */}
+                    <div className='story-styles' > 
                     <Story/>
                     </div>
             {/* <div className='mt-6 flex justify-center items-center'>
