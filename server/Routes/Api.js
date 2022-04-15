@@ -53,7 +53,17 @@ route.get("/student/:email", async (req,res)=>{
 
 //happening db
 route.post("/story",async (req,res)=>{
-    const response = await happeningSchema.create({...req.body , likes : random(40,150), time : random(1,10)})
+    /*{
+        url: 'https://picsum.photos/1080/1920', seeMore: <span>hello world</span>,
+        header: { heading: 'Mohit Karekar', subheading: 'Posted 5h ago', profileImage: 'https://picsum.photos/1000/1000' }
+    }*/
+
+    const response = await happeningSchema.create(
+        {...req.body , 
+            likes : random(40,150),
+            subheading : `Posted ${random(1,24)}h ago`,
+            profileImage: `https://i.pravatar.cc/200?u=${req.body.caption}`
+            })
     return res.json(response)
 })
 

@@ -3,9 +3,11 @@ const schema = mongoose.Schema
 
 const happeningSchema = schema({
     caption :{type :String},
-    image : {type :String},
+    profileImage: {type:String},
+    profileName : {type :String},
+    url : {type :String},
     likes : {type :Number},
-    time : {type: String}, //random
+    subheading : {type: String}, //random
 },{timestamps:true})
 
-module.exports = mongoose.model("happening",happeningSchema)
+module.exports = mongoose.model("story",happeningSchema)

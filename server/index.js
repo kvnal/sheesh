@@ -14,20 +14,22 @@
 
 // addFile();
 
-// const ipfsClient = require("ipfs-http-client");
+const ipfsClient = require("ipfs-http-client");
 const express = require("express");
 const bodyparser = require("body-parser");
 const fileupload = require("express-fileupload");
-// const fs = require("fs");
+const { default: axios } = require("axios");
+
+const fs = require("fs");
 
 // const crust = require("./crust")
 
-// console.log(ipfsClient);
-// const ipfs = ipfsClient.create({
-//   host: "localhost",
-//   port: "5001",
-//   protocol: "http",
-// });
+console.log(ipfsClient);
+const ipfs = ipfsClient.create({
+  host: "localhost",
+  port: "5001",
+  protocol: "http",
+});
 
 
 const PORT = 4000;
@@ -51,15 +53,22 @@ const random = (lowerlimit, upperlimit) =>{
 }
 
 
+
 //happening entry
 const storyPost =  async (caption, imageLink) =>{
-  await happeningSchema.create({
-    caption : caption,
-    image : imageLink,
-    likes : random(0,20),
-    time : random(0,2)
-  })
 
+  const name = await axios.get("https://api.namefake.com/").then(result =>{
+    return result.data.name;
+  })  
+
+  await happeningSchema.create({
+    profileName: name,
+    caption : caption,
+    url : imageLink,
+    likes : random(0,20),
+    subheading : `Posted ${random(1,24)}h ago`,
+    profileImage: `https://i.pravatar.cc/200?u=${caption}`
+  })
   return console.log("story Posted!");;
 }
 
@@ -150,7 +159,7 @@ async function addFileAuth(file_name, file_path) {
   //     cid: cid.path,
   //     size: fileStat.cumulativeSize
   // };
-  crust.placeStorageOrder(fileStat.cid);
+  // crust.placeStorageOrder(fileStat.cid);
 
   const link = "https://ipfs.io/ipfs/"+fileStat.cid+"/"+fileName;
   console.log(link);
