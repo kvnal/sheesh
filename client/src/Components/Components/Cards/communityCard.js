@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const CommunityCard = ({data}) => {
@@ -6,6 +7,7 @@ const CommunityCard = ({data}) => {
 
     return ( 
         <div className="w-full bg-gray-50 shadow border-1">
+          <Link to={`/community/${data.name}`}>
               <div className="mb-4">
                   <div className="relative">
                     <div className="w-full h-24 bg-cover bg-center grayscale brightness-75"
@@ -19,6 +21,8 @@ const CommunityCard = ({data}) => {
                     </div>
                   </div>         
               </div>
+            </Link>
+
               <div  className="p-4">
                   <div className="flex justify-between items-center" >
                     <h1 className="text-xl font-roboto font-medium text-black">{data.name}</h1>
@@ -28,7 +32,7 @@ const CommunityCard = ({data}) => {
                   <p className="text-sm font-roboto font-think text-gray-500">
                       {data.description}
                       </p>
-                      
+
                       <div className="flex justify-between flex-col py-2 mt-2">
                         {!follow && <button className="bg-primary-red text-white font-roboto  px-1" onClick={()=>setFollow(true)}>Follow</button>}
                         {follow && <button className="bg-sky-500 text-white font-roboto  px-1">Following</button>}

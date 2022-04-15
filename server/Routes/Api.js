@@ -97,10 +97,18 @@ route.post("/create/community/", async (req, res)=>{
     return res.json(response); 
 })
 
+route.get("/get/community/:communityName" , async (req, res)=>{
+    const response = await communitySchema.find({
+        name: req.params.communityName
+    });
+    return res.json(response);
+})
+
 route.get("/get/community" , async (req, res)=>{
     const response = await communitySchema.find();
     return res.json(response);
 })
+
 
 
 module.exports ={route}

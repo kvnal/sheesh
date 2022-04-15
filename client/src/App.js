@@ -11,6 +11,7 @@ import Chat from "./Components/Pages/Chat"
 import SplashScreen from './Components/Pages/SplashScreen';
 import { useEffect, useState } from 'react';
 import LookBookStudent from './Components/Pages/LookBookStudent';
+import CommunityIndividual from './Components/Pages/CommunityIndividual';
 
 function App() {
   const [splashScreen, setSplashScreen] = useState(false);
@@ -33,7 +34,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="amigos" element={<Amigos />} />
         <Route exact path="community" element={<Community />} />
-        <Route path="community/:id" element={<Community />} />
+        <Route path="community/:id" element={<CommunityIndividual />} />
         <Route exact path="lookbook" element={<LookBook />} />
         <Route path="lookbook/:id"   element={<LookBookStudent />} />
         <Route path="chat/:id"   element={<Chat />} />

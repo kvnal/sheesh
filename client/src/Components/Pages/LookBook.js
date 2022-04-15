@@ -63,7 +63,7 @@ const LookBook = () => {
         <div className="mt-8 grid grid-cols-3 gap-3 ">
             {dataLook && dataLook.map(Element=>(
                 <Link to={`/lookbook/${Element.email}`}>
-                <div className="mb-6">
+                <div className="mb-6" key={Element.email}>
                 <LookBookCard data={Element}/>
                 </div>
                 </Link>
