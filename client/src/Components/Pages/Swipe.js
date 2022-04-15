@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import Swipeable from "react-swipy"
-
+import {FaTimes,FaCheck} from 'react-icons/fa'
 import Card from "../Components/Cards";
 import Button from "../Components/Button";
-import SwipeCardChildern from "../Components/Cards/SwipeCardChildren";
 
 const wrapperStyles = {position: "relative", width: "360px", height: "640px" , backgroundColor : "#ececec"};
 const actionsStyles = {
@@ -51,8 +50,8 @@ class Swipe extends Component {
                 buttons={({left, right}) => (
                   <div style={actionsStyles}>
                     {this.props.btn?
-                    (<><Button onClick={left}>❌</Button>
-                    <Button onClick={right}>✔✅</Button></>):(<></>)}
+                    (<><Button onClick={left}><FaTimes/></Button>
+                    <Button onClick={right}><FaCheck/></Button></>):(<></>)}
                   </div>
                 )}
                 onAfterSwipe={this.remove}
