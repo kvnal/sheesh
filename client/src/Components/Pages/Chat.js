@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import {FaArrowAltCircleRight} from 'react-icons/fa'
 
 const chat1 =[
-    "Hi Ashish!",
+    "Hi jimmy!",
     "👋👋👋",
     "How r you?"
 ]

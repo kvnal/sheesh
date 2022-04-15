@@ -19,16 +19,16 @@ class Story extends Component {
 
 const stories = [
     {
-        url: 'https://picsum.photos/1080/1920', seeMore: <span>hello world</span>,
-        header: { heading: 'Mohit Karekar', subheading: 'Posted 5h ago', profileImage: 'https://picsum.photos/1000/1000' }
+        url: 'https://static.toiimg.com/thumb/msid-46565281,width-800,height-600,resizemode-75/46565281.jpg', seeMore: <span>hello world</span>,
+        header: { heading: 'Jimmy Mishra', subheading: 'Posted 5h ago', profileImage: 'https://picsum.photos/1000/1000' }
     }
     , {
-        url: 'https://fsa.zobj.net/crop.php?r=dyJ08vhfPsUL3UkJ2aFaLo1LK5lhjA_5o6qEmWe7CW6P4bdk5Se2tYqxc8M3tcgYCwKp0IAyf0cmw9yCmOviFYb5JteeZgYClrug_bvSGgQxKGEUjH9H3s7PS9fQa3rpK3DN3nx-qA-mf6XN',
-        header: { heading: 'Mohit Karekar', subheading: 'Posted 32m ago', profileImage: 'https://picsum.photos/1080/1920' }
+        url: 'https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg',
+        header: { heading: 'Coding Club', subheading: 'Posted 32m ago', profileImage: 'https://picsum.photos/1080/1920' }
     },
     {
-        url: 'https://media.idownloadblog.com/wp-content/uploads/2016/04/iPhone-wallpaper-abstract-portrait-stars-macinmac.jpg',
-        header: { heading: 'reactrondev/@reactrondev/react-stories', subheading: 'Posted 32m ago', profileImage: 'https://avatars0.githubusercontent.com/u/24852829?s=400&v=4' }
+        url: 'https://static.vecteezy.com/system/resources/previews/000/191/138/non_2x/vector-holi-festival-poster.png',
+        header: { heading: 'Holi Function', subheading: 'Posted 32m ago', profileImage: 'https://avatars0.githubusercontent.com/u/24852829?s=400&v=4' }
     },
 ];
 

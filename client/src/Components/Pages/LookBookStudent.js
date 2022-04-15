@@ -60,7 +60,7 @@ const LookBookStudent = () => {
                         <IoIosCall size={32}/>
                         </div>
                         <div className="flex flex-col items-center mr-8">
-                            <Link to="/chat/Ashish">
+                            <Link to="/chat/Jimmy">
                             <BsFillChatSquareDotsFill size={26}/>
                             </Link>
                         </div>

@@ -21,11 +21,7 @@ const Amigos = () => {
         </span>
       </Link>
 
-      {/* {
-        <div className="relative bottom-16 z-50 text-center font-semibold text-black">
-        <span className="text-lg block">Ashish</span>
-        <span>hello I'm ashish!!</span>
-      </div>} */}
+    
     </div>
    );
 }
