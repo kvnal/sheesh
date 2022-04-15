@@ -6,6 +6,7 @@ const studentSchema = schema({
     email :{type : String},
     dob : {type: String}, 
     yoa : {type: Number},
+    bio: {type: String},
     degree : {type:String},
     dpImage : {type:String},
     connectionCounts :{type: Number},

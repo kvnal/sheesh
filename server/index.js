@@ -14,20 +14,20 @@
 
 // addFile();
 
-const ipfsClient = require("ipfs-http-client");
+// const ipfsClient = require("ipfs-http-client");
 const express = require("express");
 const bodyparser = require("body-parser");
 const fileupload = require("express-fileupload");
-const fs = require("fs");
+// const fs = require("fs");
 
-const crust = require("./crust")
+// const crust = require("./crust")
 
-console.log(ipfsClient);
-const ipfs = ipfsClient.create({
-  host: "localhost",
-  port: "5001",
-  protocol: "http",
-});
+// console.log(ipfsClient);
+// const ipfs = ipfsClient.create({
+//   host: "localhost",
+//   port: "5001",
+//   protocol: "http",
+// });
 
 
 const PORT = 4000;

@@ -31,7 +31,10 @@ function shuffle(array) {
 route.post("/student", async (req,res)=>{
 
     const response = await studentSchema.create({
-        ...req.body, connectionCounts : random(0,20)})
+        ...req.body, connectionCounts : random(0,20),
+        dpImage : `https://i.pravatar.cc/200?u=${req.body.email}`
+    })
+    
     return res.json(response);
 })
 
@@ -86,9 +89,10 @@ route.get("/community/:communityName", async (req, res)=>{
 
 //community db
 route.post("/create/community/", async (req, res)=>{
-    const response = await communitySchema({
-        ...req.body,
-        memberCount : random(200,500)
+    const body =req.body;
+    const response = await communitySchema.create({
+       ...body,
+        memberCount : 200
     }) ;
     return res.json(response); 
 })
