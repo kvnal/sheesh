@@ -11,16 +11,21 @@ import axios from 'axios';
 
 const LookBookStudent = () => {
     const {id} = useParams();
+    const [follow, setFollow] = useState(false);
+
 
     const [dataLook, setDataLook] = useState(null);
     console.log(id);
     useEffect(() => {
+        async function fetch(){  axios.get(`/api/student/${id}`).then(result=>{
+            setDataLook(result.data[0])
+            console.log(result);
+        })
+    }
         if(id){
-            return axios.get(`/api/student/${id}`).then(result=>{
-                setDataLook(result.data[0])
-                console.log(result);
-            })
-        }
+        fetch();
+    }
+
     }, []);
 
     if(id && dataLook)
@@ -66,7 +71,8 @@ const LookBookStudent = () => {
 
                     
                     <div className="w-11/12 mt-4">
-                        <button className=" w-full bg-primary-red py-1 text-white font-roboto">Add Friend</button>
+                        {!follow && <button className=" w-full bg-primary-red py-1 text-white font-roboto" onClick={()=>setFollow(true)}>Add Friend</button>}
+                        {follow && <button className=" w-full  border-2 border-primary-red py-1 box-border text-primary-red font-roboto">Add Friend</button>}
                     </div>
             </div>
         </div>
