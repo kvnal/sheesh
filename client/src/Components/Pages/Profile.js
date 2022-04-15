@@ -5,13 +5,13 @@ const Profile = () => {
              <div className="border-4 border-primary-red  w-32 h-32 rounded-full" style={{background:`url(https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=100&q=80) center` , backgroundSize:'cover'}}>
                 </div>
                 <div className="mt-4 flex flex-col items-center">
-                    <span className="text-2xl font-roboto font-medium text-gray-700">Ashish</span>
+                    <span className="text-2xl font-roboto font-medium text-gray-700">Ben Stokes</span>
                     <span className="mt-1 text-sm font-roboto font-medium text-gray-400 ">
                         B.Tech - 
                     <span className=" font-semibold"> 3rd year</span>
                      </span>
 
-                    <span className="mt-2 text-md font-roboto font-medium text-gray-500">Hello, world! I'm Ashish.</span>
+                    <span className="mt-2 text-md font-roboto font-medium text-gray-500">Hello, world! I'm Ben.</span>
 
                 </div>
                     <div className=" w-full mt-6 font-roboto text-primary-red flex justify-center ">
