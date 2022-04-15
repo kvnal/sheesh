@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <div class="flex content-center text-white font-bold justify-center h-12 bg-pink-600">
+        <h1 class="pt-2">Sheesh.</h1>
+    </div>
+    <div class="flex justify-center items-center h-screen flex-col bg-white" >
+
+        <h1 class="text-xl text-black font-bold mb-8">Student Profile</h1>
+        <div class=" p-10 border-4  border-dashed text-white">
+
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <div class="flex flex-col">
+                    <label class="text-sm text-black mb-2 font-medium">Name</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-black mb-2 font-medium">Email</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-black mb-2 font-medium">Date of Birth</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-black mb-2 font-medium">Current acad year</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-black mb-2 font-medium">Degree</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm mb-2 text-black font-medium">Select Profile Photo</label>
+                    <input type="file" class="block w-full text-sm text-white
+                    file:mr-4 file:py-2 file:px-4 file:border-0
+                    file:text-sm file:font-semibold file:text-pink-700" name="file"><br>
+                </div>
+                <div class="w-full flex justify-center">
+                    <input class="bg-pink-700 text-white font-bold py-0.5 px-4 border-2 border-black" type="submit" value="submit">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
