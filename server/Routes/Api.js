@@ -70,6 +70,7 @@ route.post("/community/:communityName", async (req, res)=>{
     
     const response = await communityDataSchema.create({
         postedBy : "user123",
+        postedByDp : `https://i.pravatar.cc/200?u=${req.body.postedBy}`,
         caption : req.body.caption,
         image : req.body.image,
         likes : random(20,400),

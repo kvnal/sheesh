@@ -36,9 +36,7 @@ const Community = () => {
       <div className="mt-8">
         {dataCommunities.map(Element => (
           <div className="mb-6">
-            <Link to="/community/f1">
               <CommunityCard data={Element} />
-            </Link>
           </div>
         ))}
       </div>

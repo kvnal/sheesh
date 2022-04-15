@@ -5,6 +5,7 @@ const communityDataSchema = schema({
     postedBy :{type : String}, 
     caption : {type :String},
     image : {type:String},
+    postedByDp : {type:String},
     likes : {type : Number},
     communityName :{type:String}
 },{timestamps:true})
