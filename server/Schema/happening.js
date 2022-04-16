@@ -6,6 +6,11 @@ const happeningSchema = schema({
     profileImage: {type:String},
     profileName : {type :String},
     url : {type :String},
+    imgMongoDB:
+    {
+        data: Buffer,
+        contentType: String
+    },
     likes : {type :Number},
     subheading : {type: String}, //random
 },{timestamps:true})
