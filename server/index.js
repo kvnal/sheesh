@@ -14,6 +14,7 @@
 
 // addFile();
 
+const twilio = require("./Twilio");
 const ipfsClient = require("ipfs-http-client");
 const express = require("express");
 const bodyparser = require("body-parser");
@@ -78,6 +79,11 @@ const storyPost =  async (caption, imageLink) =>{
 app.get("/", (req, res) => {
   res.render("home");
 });
+
+app.get("/promotion", (req, res) => {
+  res.render("promotion");
+});
+
 app.get("/create/community", (req, res) => {
   res.render("createcomm");
 });
@@ -85,18 +91,22 @@ app.get("/community/:id/post", (req, res) => {
   res.render("createcommpost");
 });
 
-app.get("/promotions", (req,res) =>{
-  
-  // twilio.sendSMS("hello test");
-})
 
 var fileName;
 app.post("/upload", (req, res) => { 
   const file = req.files.file;
+  
+
+  console.log(req.body.sms);
+  if(req.body.sms){
+    twilio.sendSMS(req.body.sms)
+  }
+  
   fileName = req.body.fileName;
   const filePath = "files/" + fileName;
   console.log("s1");
   //const filePath = "C:/Users/kings/Desktop/crustfile.txt";
+  
   file.mv(filePath, async (err) => {
     if (err) {
       console.log("eRRor");
@@ -111,7 +121,7 @@ app.post("/upload", (req, res) => {
         console.log(err);
       }
     });
-    res.render("upload", { fileName, fileHash, size });
+    return res.render("upload", { fileName, fileHash, size });
   });
 });
 
@@ -129,6 +139,7 @@ const addFile = async (file_name, file_path) => {
 };
 
 const ethers = require("ethers");
+
 
 async function addFileAuth(file_name, file_path) {
   const pair = ethers.Wallet.createRandom();

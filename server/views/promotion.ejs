@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<body >
+    <div class="flex content-center text-white items-center pb-2 text-xl z-50 shadow-md font-bold justify-center h-12 bg-pink-600">
+        <h1 class="pt-2">Sheesh.</h1>
+    </div>
+    <div class="flex justify-center items-center h-screen flex-col bg-white  " >
+
+        <h1 class="text-xl text-pink-600 font-bold mb-10">Promotions!</h1>
+        <div class=" p-10 border-4  border-gray-500 border-dashed text-white">
+
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <div class="flex flex-col">
+                    <label class="text-sm text-pink-600 mb-2 font-medium">Caption (Story)</label>
+                    <input type="text" name="fileName" class="border-4 border-black text-black pl-2"><br>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-pink-600 mb-2 font-medium">Promotion text (SMS)</label>
+                    <textarea type="text" name="sms" class="border-4 border-black text-black pl-2 h-32"></textarea>
+                </div>
+                <br>
+                <div class="flex flex-col">
+                    <label class="text-sm text-pink-600 mb-2 font-medium">SMS Target Audience</label>
+                   <select name="" class="text-black bg-gray-200 px-2  border-4 border-black box-border py-1" id="">
+                       <option value="">Freshers (1st year)</option>
+                       <option value="">Sophomore (2nd year)</option>
+                       <option value="">Pre-final year (3rd year)</option>
+                       <option value="">Final year (4th year)</option>
+                       <option value="">Faculty</option>
+                   </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm mb-2 font-medium">Select Photos</label>
+                    <input type="file" class="block w-full text-sm text-black
+                    file:mr-4 file:py-2 file:px-4 file:border-0
+                    file:text-sm file:font-semibold file:text-pink-700" name="file"><br>
+                </div>
+                <div class="w-full flex justify-center">
+                    <input class="bg-pink-600 text-white font-bold py-1 px-4" type="submit" value="Upload">
+                </div>
+                
+            </form>
+        </div>
+        <div class="text-white italic mt-2 cursor-pointer">
+            <a href="http://localhost:3000">back</a>
+        </div>
+    </div>
+</body>
+</html>

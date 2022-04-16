@@ -35,6 +35,7 @@ const Home = () => {
             });
             return stories;
         }).then(stories => setStoriesData(stories));
+        
     }, []);
     const redirect = () => {
         return window.location.href = "http://localhost:" + fileUploadPORT;
