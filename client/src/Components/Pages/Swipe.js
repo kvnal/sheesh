@@ -27,7 +27,7 @@ class Swipe extends Component {
   //   ],
   // };
   state = {
-    cards: this.props.props,
+    cards: this.props.cardsData,
   };
 
   remove = () =>
@@ -56,7 +56,7 @@ class Swipe extends Component {
                 )}
                 onAfterSwipe={this.remove}
               >
-                <Card imageURL={cards[0]} name={"Jimmy Mishra"} bio={"Anime 🔥 | Coder 👨‍💻"}></Card>
+                <Card imageURL={cards[0].dpImage} name={cards[0].name} bio={cards[0].bio} degreeText={cards[0].degree}></Card>
               </Swipeable>
               
               {/* {cards.length > 1 && <Card zIndex={-1}>{cards[1]}</Card>} */}

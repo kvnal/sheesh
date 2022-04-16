@@ -1,14 +1,17 @@
 
-
-import Swipe from './Swipe';
-import { FaFileUpload } from "react-icons/fa";
 import {MdAddBox} from 'react-icons/md'
 import {FaUserAlt} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import Story from '../Components/Cards/Story';
+import axios from 'axios'
+import { useEffect, useState } from 'react';
+
+
 const fileUploadPORT = "4000";
 
 const Home = () => {
+
+
     const redirect = () =>{
         return window.location.href = "http://localhost:"+fileUploadPORT;
     }
