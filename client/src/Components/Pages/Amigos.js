@@ -20,7 +20,6 @@ const Amigos = () => {
     */
 
     axios.get("api/student").then(result => {
-      console.log(result.data);
       setstoriesData(result.data)
     });
   }, []);

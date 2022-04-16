@@ -62,7 +62,7 @@ const storyPost =  async (caption, imageLink) =>{
 
   const name = await axios.get("https://api.namefake.com/").then(result =>{
     return result.data.name;
-  })  
+  })
 
   await happeningSchema.create({
     profileName: name,

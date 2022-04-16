@@ -4,10 +4,15 @@ import React, { Component } from 'react';
 import Stories from '@reactrondev/react-stories';
 
 class Story extends Component {
+    constructor(props) {
+        super(props);
+        console.log(props);
+      }
+
     render() {
         return (
             <Stories
-                stories={stories}
+                stories={this.props.stories}
                 defaultInterval={1500}
                 width={380}
                 height={700}

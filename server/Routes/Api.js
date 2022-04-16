@@ -9,20 +9,6 @@ const random = (lowerlimit, upperlimit) =>{
     return Math.floor(Math.random()*(upperlimit-lowerlimit)) + lowerlimit
 }
 
-
-var multer = require('multer');
-  
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-});
-  
-var upload = multer({ storage: storage });
-
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -82,7 +68,7 @@ route.post("/story",async (req,res)=>{
 })
 
 route.get("/story", async (req,res)=>{
-    const response = await happeningSchema.find();
+    const response = await happeningSchema.find().sort({createdAt : -1}).exec();
     return res.json(response)
     //latest first
 })
@@ -150,25 +136,6 @@ route.get("/get/community" , async (req, res)=>{
 //     });
 // });
 
-route.post('/upload', upload.single('image'), async (req, res, next) => {
-  
-    const body =req.body;
-    const response = await happeningSchema.create({
-        caption :req.body.caption,
-        profileImage: 'kunalpic',
-        profileName : 'kunal',
-        url : 'kunalurl',
-        imgMongoDB:
-        {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-            contentType: 'image/png'
-        },
-        likes : 100,
-        subheading : 'new story', //random
-    }) ;
-    return res.json(response); 
-   
-});
 
 
 
