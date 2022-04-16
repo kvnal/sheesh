@@ -1,6 +1,7 @@
 
 import { MdAddBox } from 'react-icons/md';
 import { FaUserAlt } from 'react-icons/fa';
+import { RiLiveFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import Story from '../Components/Cards/Story';
 import axios from 'axios';
@@ -35,7 +36,7 @@ const Home = () => {
             });
             return stories;
         }).then(stories => setStoriesData(stories));
-        
+
     }, []);
     const redirect = () => {
         return window.location.href = "http://localhost:" + fileUploadPORT;
@@ -53,6 +54,10 @@ const Home = () => {
                         Upload a file
                     </MdAddBox>
 
+                    <a href="http://localhost:3002/kunal/live">
+                        <RiLiveFill className="text-primary-red" size={24}>
+                        </RiLiveFill>
+                    </a>
                     <Link to="/profile">
                         <FaUserAlt className="text-primary-red" size={24}>
                         </FaUserAlt>

@@ -14,7 +14,7 @@ import LookBookStudent from './Components/Pages/LookBookStudent';
 import CommunityIndividual from './Components/Pages/CommunityIndividual';
 
 function App() {
-  const [splashScreen, setSplashScreen] = useState(false);
+  const [splashScreen, setSplashScreen] = useState(true);
   useEffect(() => {
     setInterval(() => {
       setSplashScreen(false);

@@ -8,7 +8,7 @@ const CommunityPostCard = ({data}) => {
         <div className="bg-gray-100 py-2">
             <div>
                 <div className="pt-2 flex items-center">
-                    <img className="rounded-full h-8 w-8" src={data.dpImage} alt="" />
+                    <img className="rounded-full h-8 w-8" src={`https://i.pravatar.cc/200?u=${data.caption}`} alt="" />
                     <span className="ml-2 flex flex-col text-sm text-gray-800 font-roboto font-medium">
                         {data.user}
                     <span className=" text-xs text-sky-500 font-roboto font-bold">
